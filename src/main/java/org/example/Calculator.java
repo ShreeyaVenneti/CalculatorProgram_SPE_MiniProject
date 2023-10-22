@@ -2,12 +2,14 @@ import java.util.*;
 
 public class Calculator 
 {
+    //function to compute sum
     public static double addition(double x, double y) 
     {
         double sum = x + y;
         return sum;
     }
 
+    //function to compute quotient
     public static double division(double x, double y)
     {
         if (y != 0)
@@ -16,6 +18,7 @@ public class Calculator
             return quotient;
         }
 
+        //error handling
         System.out.println("Invalid input: Division by zero");
         return -1;
     }
@@ -32,6 +35,7 @@ public class Calculator
 
         int choice = scanner.nextInt();
 
+        //if sum is chosen
         if (choice == 1) 
         {
             System.out.print("Enter 2 numbers for computing sum: ");
@@ -41,16 +45,19 @@ public class Calculator
             System.out.println("The addition result is: " + result);
         } 
 
-        if (choice == 2)
+        //if quotient is chosen
+        else if (choice == 2)
         {
             System.out.print("Enter 2 numbers for computing quotient: ");
             double x = scanner.nextDouble();
             double y = scanner.nextDouble();
             double result = division(x, y);
+            //error handling
             if (y != 0)
                 System.out.println("The division result is: " + result);
         }
 
+        //if user wants to exit
         else 
         {
             System.out.println("Thanks for using the Calculator Program. Goodbye!");
