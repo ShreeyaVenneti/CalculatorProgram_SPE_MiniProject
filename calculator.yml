@@ -1,0 +1,15 @@
+---
+- name: Pull Docker Image of Calculator
+  hosts: localhost
+
+  tasks:
+    - name: Start Docker Service
+      service:
+        name: docker
+        state: started
+
+    - name: Pull Image
+      shell: docker pull shreeyav/calculator:latest
+
+    - name: Run the container
+      shell: docker run -it -d --name calculator_container shreeyav/calculator
