@@ -12,4 +12,4 @@
       shell: docker pull shreeyav/calculator:latest
 
     - name: Run the container
-      shell: docker run -it -d --name calculator_container shreeyav/calculator
+      shell: docker create -it --name calculator_container shreeyav/calculator
