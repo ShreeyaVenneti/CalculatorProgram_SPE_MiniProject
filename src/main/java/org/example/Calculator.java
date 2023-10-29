@@ -19,8 +19,21 @@ public class Calculator
         }
 
         //error handling
-        System.out.println("Invalid input: Division by zero");
-        return -1;
+        return Double.NaN;
+    }
+
+    //function to compute logarithm of a number to any base
+    //loga_b = loga_e/logb_e
+    public static double logarithm(double number, double base)
+    {
+        if ((number > 0)&&(base > 0))
+        {
+            double result = Math.log(number) / Math.log(base);
+            return result;
+        }
+
+        //error handling
+        return Double.NaN;
     }
 
     public static void main(String[] args) 
@@ -31,7 +44,8 @@ public class Calculator
         System.out.println("Choice of operations:");
         System.out.println("1. For addition operation");
         System.out.println("2. For division operation");
-        System.out.println("3. To Exit\n");
+        System.out.println("3. For logarithm operation");
+        System.out.println("4. To Exit\n");
 
         int choice = scanner.nextInt();
 
@@ -53,9 +67,27 @@ public class Calculator
             double y = scanner.nextDouble();
             double result = division(x, y);
             //error handling
-            if (y != 0)
+            
+            if (Double.isNaN(result))
+                System.out.println("Invalid input: Division by zero");
+            else
                 System.out.println("The division result is: " + result);
         }
+
+
+        //if quotient is chosen
+        else if (choice == 3)
+        {
+            System.out.print("Enter 2 numbers for computing logarithm: ");
+            double x = scanner.nextDouble();
+            double y = scanner.nextDouble();
+            double result = logarithm(x, y);
+            //error handling
+            if (Double.isNaN(result))
+                System.out.println("Invalid input: Both inputs should be positive");
+            else
+                System.out.println("The logarithm result is: " + result);
+        } 
 
         //if user wants to exit
         else 
