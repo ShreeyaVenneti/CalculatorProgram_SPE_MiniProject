@@ -1,0 +1,14 @@
+29/Oct/2023:10:58:45 501 [Calculator.java] [INFO] Calculator logarithm operation begins
+29/Oct/2023:10:58:45 505 [Calculator.java] [INFO] Calculator logarithm operation ends
+29/Oct/2023:10:58:45 506 [Calculator.java] [INFO] Calculator logarithm operation begins
+29/Oct/2023:10:58:45 506 [Calculator.java] [INFO] Calculator logarithm operation ends
+29/Oct/2023:10:58:45 507 [Calculator.java] [INFO] Calculator logarithm operation begins
+29/Oct/2023:10:58:45 507 [Calculator.java] [WARN] Calculator invalid input
+29/Oct/2023:10:58:45 508 [Calculator.java] [INFO] Calculator division operation begins
+29/Oct/2023:10:58:45 508 [Calculator.java] [INFO] Calculator division operation ends
+29/Oct/2023:10:58:45 509 [Calculator.java] [INFO] Calculator addition operation begins
+29/Oct/2023:10:58:45 509 [Calculator.java] [INFO] Calculator addition operation ends
+29/Oct/2023:10:58:45 510 [Calculator.java] [INFO] Calculator square root operation begins
+29/Oct/2023:10:58:45 510 [Calculator.java] [INFO] Calculator square root operation ends
+29/Oct/2023:10:58:45 510 [Calculator.java] [INFO] Calculator square root operation begins
+29/Oct/2023:10:58:45 511 [Calculator.java] [WARN] Calculator invalid input

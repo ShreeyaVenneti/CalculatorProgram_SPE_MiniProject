@@ -1,23 +1,32 @@
 import java.util.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Calculator 
 {
+    private static final Logger logger = LogManager.getLogger(Calculator.class);
+
     //function to compute sum
     public static double addition(double x, double y) 
     {
+        logger.info("addition operation begins");
         double sum = x + y;
+        logger.info("addition operation ends");
         return sum;
     }
 
     //function to compute quotient
     public static double division(double x, double y)
     {
+        logger.info("division operation begins");
         if (y != 0)
         {
             double quotient = x/y;
+            logger.info("division operation ends");
             return quotient;
         }
 
+        logger.warn("invalid input");
         //error handling
         return Double.NaN;
     }
@@ -26,12 +35,15 @@ public class Calculator
     //loga_b = loga_e/logb_e
     public static double logarithm(double number, double base)
     {
+        logger.info("logarithm operation begins");
         if ((number > 0)&&(base > 0))
         {
             double result = Math.log(number) / Math.log(base);
+            logger.info("logarithm operation ends");
             return result;
         }
 
+        logger.warn("invalid input");
         //error handling
         return Double.NaN;
     }
@@ -39,18 +51,23 @@ public class Calculator
     //function to compute square root of any number
     public static double square_root(double number)
     {
+        logger.info("square root operation begins");
         if (number >= 0)
         {
             double result = Math.sqrt(number);
+            logger.info("square root operation ends");
             return result;
         }
 
+        logger.warn("invalid input");
         //error handling
         return Double.NaN;
     }
 
     public static void main(String[] args) 
     {
+        logger.info("calculator program begins");
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("-------- Welcome to the Calculator!");
@@ -123,6 +140,8 @@ public class Calculator
         }
 
         scanner.close();
+
+        logger.info("calculator program ends");
     }
 }
 
