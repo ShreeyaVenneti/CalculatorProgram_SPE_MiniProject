@@ -36,6 +36,19 @@ public class Calculator
         return Double.NaN;
     }
 
+    //function to compute square root of any number
+    public static double square_root(double number)
+    {
+        if (number >= 0)
+        {
+            double result = Math.sqrt(number);
+            return result;
+        }
+
+        //error handling
+        return Double.NaN;
+    }
+
     public static void main(String[] args) 
     {
         Scanner scanner = new Scanner(System.in);
@@ -45,7 +58,8 @@ public class Calculator
         System.out.println("1. For addition operation");
         System.out.println("2. For division operation");
         System.out.println("3. For logarithm operation");
-        System.out.println("4. To Exit\n");
+        System.out.println("4. For square root operation");
+        System.out.println("5. To Exit\n");
 
         int choice = scanner.nextInt();
 
@@ -88,6 +102,19 @@ public class Calculator
             else
                 System.out.println("The logarithm result is: " + result);
         } 
+
+        //if quotient is chosen
+        else if (choice == 4)
+        {
+            System.out.print("Enter 1 number for square root operation: ");
+            double x = scanner.nextDouble();
+            double result = square_root(x);
+            //error handling
+            if (Double.isNaN(result))
+                System.out.println("Invalid input: Input should be positive");
+            else
+                System.out.println("The square root result is: " + result);
+        }
 
         //if user wants to exit
         else 
