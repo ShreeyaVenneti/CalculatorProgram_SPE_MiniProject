@@ -11,5 +11,5 @@
     - name: Pull Image
       shell: docker pull shreeyav/calculator:latest
 
-    - name: Run the container
+    - name: Create the container
       shell: docker create -it --name calculator_container shreeyav/calculator
